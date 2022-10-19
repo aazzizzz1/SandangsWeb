@@ -1,0 +1,56 @@
+.flash {
+  background: #f6f9fc;
+  padding: 50px 0;
+}
+
+.button {
+  color: #ffffff;
+  text-align: center;
+  background-color: #0F70B7;;
+  box-sizing: border-box;
+  margin: 2px;
+  font: 25px;
+  padding: 1px 7px 2px;
+  border-width: 1px;
+  border-radius: 5%;
+  border-color: #0F70B7;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.discount {
+  background-color: #0F70B7;
+}
+
+.img img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.price button {
+  color: #0F70B7;
+}
+
+.price button:hover{
+  background-color: #0F70B7;
+}
+
+h4 {
+  color: #0F70B7;
+}
+
+.control-btn .next {
+  background-color: #0F70B7;
+}
+
+.control-btn .next:hover {
+  background-color: #094774;
+}
+
+.control-btn .prev {
+  background-color: #0F70B7;
+}
+
+.control-btn .prev:hover {
+  background-color: #094774;
+}

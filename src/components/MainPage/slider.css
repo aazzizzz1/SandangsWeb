@@ -1,0 +1,9 @@
+.sliderContainer{
+    background-color: rgb(223, 223, 223);
+    width: 100%;
+}
+
+.sectionContainer{
+    background-color: rgb(223, 223, 223);
+    min-width: 100% !important;
+}
