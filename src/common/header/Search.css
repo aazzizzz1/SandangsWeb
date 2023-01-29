@@ -1,4 +1,12 @@
 /*------search-----------*/
+.head i{
+  color: #fff;
+}
+
+.head label{
+  color: #fff;
+}
+
 .search {
     padding: 10px 0;
   }

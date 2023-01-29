@@ -20,7 +20,7 @@ const SlideCard = () => {
       {Sdata.map((value, index) => {
         return (
           <div style={{ minWidth: "100% !important" }} className="center" key={index}>
-            <img src={value.cover} alt="" style={{ margin: "0px auto", width: "100%", height: "100%", margin: "0px auto", marginTop: "-50px",radius: "5px" }} />
+            <img src={value.cover} alt="" style={{ margin: "0px auto", width: "100%", height: "100%", marginTop: "-50px",radius: "5px" }} />
           </div>
         );
       })}

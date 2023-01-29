@@ -4,6 +4,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer span {
+  color: #ffffff;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,6 +20,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
 }
+
 .background {
   background: #f6f9fc;
   padding: 50px 0;
@@ -31,10 +41,7 @@ body {
 .f_flex {
   display: flex;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
+
 li {
   list-style: none;
 }
@@ -53,9 +60,7 @@ button {
   outline: none;
   background-color: none;
 }
-.row {
-  width: 50%;
-}
+
 .icon-circle {
   width: 50px;
   height: 50px;
@@ -102,15 +107,7 @@ button {
 }
 
 /*---------category----------*/
-.btn-primary {
-  background: #e94560;
-  padding: 13px 40px;
-  font-weight: bold;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  box-sizing: border-box;
-}
+
 .top {
   margin-top: 80px;
 }
@@ -251,3 +248,212 @@ button {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
+
+/* ---------------------SignUp--------- */
+.auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
+}
+
+
+/* ---------Fitting Room CSS------------- */
+
+.btn-danger{
+  color: #f3f5f9;
+  background-color: #e94560;
+  border-color: #651623;
+  padding: 13px 20px;
+}
+
+.btn-primary {
+  background: #0F70B7;
+  padding: 13px 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.thumbnail .caption{
+  padding: 50px;
+}
+
+
+
+.row {
+  width: 90%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card {
+  padding: 30px;
+  background-color: rgba(214, 224, 226, 0.2);
+  -webkit-border-top-left-radius:5px;
+  -moz-border-top-left-radius:5px;
+  border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -moz-border-top-right-radius:5px;
+  border-top-right-radius:5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.card.hovercard {
+  position: relative;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
+}
+.card.hovercard .card-background {
+  height: 110px;
+}
+.card-background img {
+  -webkit-filter: blur(25px);
+  -moz-filter: blur(25px);
+  -o-filter: blur(25px);
+  -ms-filter: blur(25px);
+  filter: blur(25px);
+  margin-left: -100px;
+  margin-top: -200px;
+  min-width: 130%;
+}
+.card.hovercard .useravatar {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+}
+.card.hovercard .useravatar img {
+ width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+.card.hovercard .card-info {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+}
+.card.hovercard .card-info .card-title {
+  padding:0 5px;
+  font-size: 20px;
+  line-height: 26px;
+  color: #262626;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.card.hovercard .card-info {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  color: #737373;
+  text-overflow: ellipsis;
+}
+.card.hovercard .bottom {
+  padding: 0 20px;
+  margin-bottom: 17px;
+}
+.btn-pref .btn {
+  border-radius:0 !important;
+}
+hr.style13 {
+  height: 30px;
+  border: 0;
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+

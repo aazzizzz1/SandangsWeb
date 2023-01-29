@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react"
 import Dcard from "./Dcard"
-import { Link } from "react-router-dom"
 
 const Discount = () => {
   return (

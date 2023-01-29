@@ -1,21 +1,31 @@
-import React from "react"
-import "./style.css"
+import React from "react";
+import "./style.css";
+
 
 const Footer = () => {
   return (
     <>
       <footer>
-        <div className='container grid2'>
-          <div className='box-1'>
+        <div className="grid2">
+          <div className="box-1">
             <img src="././images/sandangs/sandangswhite.png" alt=""></img>
-            <p>Sebuah aplikasi berbasis desktop dan mobile yang menjadi marketplace fashion yang didukung oleh teknologi AR Swapping Clothes yang dapat memilih baju sesuai selera
-              dan bisa custom sendiri baju yang diinginkan oleh desainer dan konveksi pilihan anda sendiri
+            <p>
+              Sebuah aplikasi berbasis desktop dan mobile yang menjadi
+              marketplace fashion yang didukung oleh teknologi AR Swapping
+              Clothes yang dapat memilih baju sesuai selera dan bisa custom
+              sendiri baju yang diinginkan oleh desainer dan konveksi pilihan
+              anda sendiri
             </p>
-            <div className='icon d_flex'>
-              <div className='img d_flex'>
-                <i class='fa-brands fa-google-play'></i>
+            <div className="icon d_flex">
+              <a className="footer" href="https://play.google.com/store/apps/details?id=com.fashionizt.cloths">
+              <div className="img d_flex">
+                <a href="https://play.google.com/store/apps/details?id=com.fashionizt.cloths">
+                <i class="fa fa-play-circle" aria-hidden="true"></i>
+                </a>
                 <span>Google Play</span>
               </div>
+            </a>
+              
               {/* <div className='img d_flex'>
                 <i class='fa-brands fa-app-store-ios'></i>
                 <span>App Store</span>
@@ -23,7 +33,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='box'>
+          <div className="box">
             <h2>About Us</h2>
             <ul>
               <li>Sandangs Mall</li>
@@ -33,7 +43,7 @@ const Footer = () => {
               <li>Sandangs Mitra Produksi</li>
             </ul>
           </div>
-          <div className='box'>
+          <div className="box">
             <h2>Customer Care</h2>
             <ul>
               <li>Help Center </li>
@@ -43,7 +53,7 @@ const Footer = () => {
               <li>Returns & Refunds </li>
             </ul>
           </div>
-          <div className='box'>
+          <div className="box">
             <h2>Contact Us</h2>
             <ul>
               <li>Pens Sky Venture, Politeknik Elektronika Negeri Surabaya </li>
@@ -56,7 +66,7 @@ const Footer = () => {
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

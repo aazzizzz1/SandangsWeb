@@ -62,3 +62,31 @@
 .price h4 {
   color: #F96D01;
 }
+
+/*========== VARIABLE CSS ==========*/
+:root {
+  /*========== Screen Size ==========*/
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+
+/*========== Medium devices ==========*/
+@media screen and (max-width:1024px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+/*========== Small devices ==========*/
+@media screen and (max-width:600px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}

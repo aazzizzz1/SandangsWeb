@@ -1,13 +1,11 @@
 import React from 'react'
-import "./style.css"
 
-function sayHello() {
-    alert('You clicked me!');
-  }
 
 function Button() {
   return (
-    <button onClick={sayHello} className='btn-primary'>View</button>
+    <a href="https://play.google.com/store/apps/details?id=com.fashionizt.cloths">
+        <button onClick={{}} className='btn-primary'>View</button>          
+    </a>
   )
 }
 

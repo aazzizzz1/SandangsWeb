@@ -1,14 +1,16 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 
 function Button() {
-    let history = useHistory();
+    // let history = useHistory();
 
-  function handleClick() {
-    history.push("./shops/Shop");
-  }
+  // function handleClick() {
+  //   history.push("./shops/Shop");
+  // }
   return (
-    <button onClick={handleClick} className='btn-primary'>Desainer</button>
+    <a href="https://play.google.com/store/apps/details?id=com.fashionizt.cloths">
+      <button className='btn-primary'>Desainer</button>
+    </a>
   )
 }
 

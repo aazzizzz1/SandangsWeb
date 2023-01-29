@@ -3,6 +3,9 @@ import ButtonFroom from "./ButtonFroom"
 import ButtonMall from "./ButtonMall"
 import ButtonMitra from "./ButtonMitra"
 import ButtonPre from "./ButtonPre"
+import React  from 'react';
+
+
 const Ddata = [
   {
     cover: "./images/discount/designer01.png",

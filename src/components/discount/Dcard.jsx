@@ -9,7 +9,7 @@ const Dcard = () => {
   const settings = {
     dots: false,
     infinite: false,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: false,
   }
@@ -22,9 +22,8 @@ const Dcard = () => {
               <div className='box product' key={index}>
                 <div className='img'>
                   <img src={value.cover} alt='' width='100%' />
+                  <h4>{value.name}</h4>
                 </div>
-                <h4>{value.name}</h4>
-                <span>{value.price}</span>
               </div>
             </>
           )

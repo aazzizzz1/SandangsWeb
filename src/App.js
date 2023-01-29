@@ -1,15 +1,18 @@
-import React, { useState } from "react"
-import "./App.css"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Header from "./common/header/Header"
-import Pages from "./pages/Pages"
-import Data from "./components/Data"
-import Cart from "./common/Cart/Cart"
-import Footer from "./common/footer/Footer"
-import Sdata from "./components/shops/Sdata"
-import Froom from "./components/FittingRoom/FRoom"
-import ShopCart from "./components/shops/ShopCart"
-import Shop from "./components/shops/Shop"
+import React, { useState } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./common/header/Header";
+import Pages from "./pages/Pages";
+import Data from "./components/Data";
+import Cart from "./common/Cart/Cart";
+import Footer from "./common/footer/Footer";
+import Sdata from "./components/shops/Sdata";
+import Shop from "./components/shops/Shop";
+import HomeFittingRoom from "./Screen/HomeFittingRoom";
+import SignUpAwal from "./components/SignUp/SignUpAwal";
+import SignUpDesainer from "./components/SignUp/SignUpDesainer";
+import SignUpKonveksi from "./components/SignUp/SignUpKonveksi";
+
 
 function App() {
   /*
@@ -25,16 +28,16 @@ function App() {
   */
 
   //Step 1 :
-  const { productItems } = Data
-  const { shopItems } = Sdata
+  const { productItems } = Data;
+  const { shopItems } = Sdata;
 
   //Step 2 :
-  const [CartItem, setCartItem] = useState([])
+  const [CartItem, setCartItem] = useState([]);
 
   //Step 4 :
   const addToCart = (product) => {
     // if hamro product alredy cart xa bhane  find garna help garxa
-    const productExit = CartItem.find((item) => item.id === product.id)
+    const productExit = CartItem.find((item) => item.id === product.id);
     // if productExit chai alredy exit in cart then will run fun() => setCartItem
     // ani inside => setCartItem will run => map() ani yo map() chai each cart ma
     // gayara check garxa if item.id ra product.id chai match bhayo bhane
@@ -42,54 +45,102 @@ function App() {
     // ani increase  exits product QTY by 1
     // if item and product doesnt match then will add new items
     if (productExit) {
-      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty + 1 } : item)))
+      setCartItem(
+        CartItem.map((item) =>
+          item.id === product.id
+            ? { ...productExit, qty: productExit.qty + 1 }
+            : item
+        )
+      );
     } else {
       // but if the product doesnt exit in the cart that mean if card is empty
       // then new product is added in cart  and its qty is initalize to 1
-      setCartItem([...CartItem, { ...product, qty: 1 }])
+      setCartItem([...CartItem, { ...product, qty: 1 }]);
     }
-  }
+  };
 
   // Stpe: 6
   const decreaseQty = (product) => {
     // if hamro product alredy cart xa bhane  find garna help garxa
-    const productExit = CartItem.find((item) => item.id === product.id)
+    const productExit = CartItem.find((item) => item.id === product.id);
 
     // if product is exit and its qty is 1 then we will run a fun  setCartItem
     // inside  setCartItem we will run filter to check if item.id is match to product.id
     // if the item.id is doesnt match to product.id then that items are display in cart
     // else
     if (productExit.qty === 1) {
-      setCartItem(CartItem.filter((item) => item.id !== product.id))
+      setCartItem(CartItem.filter((item) => item.id !== product.id));
     } else {
       // if product is exit and qty  of that produt is not equal to 1
       // then will run function call setCartItem
       // inside setCartItem we will run map method
       // this map() will check if item.id match to produt.id  then we have to desc the qty of product by 1
-      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty - 1 } : item)))
+      setCartItem(
+        CartItem.map((item) =>
+          item.id === product.id
+            ? { ...productExit, qty: productExit.qty - 1 }
+            : item
+        )
+      );
     }
-  }
+  };
 
   return (
     <>
       <Router>
-        <Header CartItem={CartItem} />
         <Switch>
-        <Route path='/cart' exact>
-            <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
+          <Route path="/cart" exact>
+            <Cart
+              CartItem={CartItem}
+              addToCart={addToCart}
+              decreaseQty={decreaseQty}
+            />
           </Route>
-          <Route path='/' exact>
-            <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
+          <Route path="/" exact>
+            <Header CartItem={CartItem} />
+            <Pages
+              productItems={productItems}
+              addToCart={addToCart}
+              shopItems={shopItems}
+            />
+            <Footer />
           </Route>
-          <Route path='/fittingroom' exact>
-              <Froom/>
-              <Shop/>
+          <Route path="/fittingroom" exact>
+            <Header CartItem={CartItem} />
+            <HomeFittingRoom />
+            <Shop />
+            <Footer />
+          </Route>
+          <Route path="/signupawal" exact>
+            <Header CartItem={CartItem} />
+            <div className="auth-wrapper">
+              <div className="auth-inner">
+                <SignUpAwal/>
+              </div>
+              <Footer />
+            </div>
+          </Route>
+          <Route path="/signupkonveksi" exact>
+            <Header CartItem={CartItem} />
+            <div className="auth-wrapper">
+              <div className="auth-inner">
+                <SignUpKonveksi/>
+              </div>
+              <Footer />
+            </div>
+          </Route>
+          <Route path="/signupdesainer" exact>
+            <Header CartItem={CartItem} />
+            <div className="auth-wrapper">
+              <div className="auth-inner">
+                <SignUpDesainer/>
+              </div>
+            </div>
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

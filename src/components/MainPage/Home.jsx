@@ -4,7 +4,7 @@ import SliderHome from "./Slider"
 
 const Home = () => {
   return (
-    <div style={{ maxWidth: "100%" }}>
+    <div className="container">
       <section className="home">
         <div className="d_flex" style={{ minWidth: "100%" }}>
           {/* <Categories /> */}

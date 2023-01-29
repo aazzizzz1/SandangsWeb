@@ -1,15 +1,11 @@
 footer .box-1 img{
-  margin-top: -50px;
+  margin-top: -20px;
   margin-bottom: -15px;
-}
-
-footer .box-1{
-  padding-right: 50px;
 }
 
 footer {
   background-color: #0F70B7;
-  padding: 100px 0;
+  padding: 20px;
   color: #fff;
 }
 footer h1 {
@@ -20,15 +16,15 @@ footer h1 {
 }
 footer .img {
   background-color: #072b53;
-  padding: 15px 20px;
+  padding: 15px;
   border-radius: 5px;
 }
 footer .img i {
-  font-size: 20px;
+  font-size: 30px;
   margin: 5px;
 }
 footer .img span {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 footer p {
   font-size: 14px;

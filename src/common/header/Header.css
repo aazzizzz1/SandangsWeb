@@ -8,8 +8,15 @@
   margin-left: 18px;
 }
 .search .button2{
-  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
 }
+
+.search .button4{
+  margin-left: 18px;
+}
+
 .head i {
   margin-right: 10px;
 }
